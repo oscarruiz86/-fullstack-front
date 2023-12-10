@@ -1,0 +1,18 @@
+body {
+    font-family: Verdana;
+  }
+#datosCliente{
+    background-color: #55ccff;
+}
+
+#datosPedido{
+    background-color: #40ccbb;
+}
+
+.logoTitulo{
+    display: inline-flex;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
