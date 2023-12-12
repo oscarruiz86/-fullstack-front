@@ -12,4 +12,20 @@ $(document).ready(function(){
             event.preventDefault();
         }
       });
+
+
+      $("#TamanioPizza").on('change', function() {
+        console.log(this.value);
+        var dict = {tamanioPizza : this.value};
+            $.ajax({
+                type: "POST", 
+                url: "http://127.0.0.1:5000/checksize",
+                data : JSON.stringify(dict),
+                contentType: "application/json",
+                success :(resp)=>{
+                    let data = JSON.parse(resp);
+                    $("#disponibilidad").html(data['mensaje']);
+                 },
+            });
+       });
 });
